@@ -36,6 +36,10 @@ export default function Board() {
     setSquares(nextSquares);
   }
   
+  // function clearBoard() that clears all the values of the board
+  function clearBoard() {
+    setSquares(Array(9).fill(null));
+  }
   
   return (
     <>
@@ -56,6 +60,7 @@ export default function Board() {
           <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
         </div>
       </div>
+      <button className="clear-button" onClick={clearBoard}>Clear Board</button>
     </>
   );
 }
